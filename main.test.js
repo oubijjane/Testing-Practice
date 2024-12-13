@@ -1,4 +1,10 @@
-import { capitalize, reverseString, Calculator, caesarCipher } from "./main.js";
+import {
+  capitalize,
+  reverseString,
+  Calculator,
+  caesarCipher,
+  analyzeArray,
+} from "./main.js";
 
 test("first character from a string to be capitalized", () => {
   expect(capitalize("test")).toBe("T");
@@ -57,3 +63,22 @@ test("Shift Cipher with non alphabets", () => {
   expect(caesarCipher("Hello, World!", 29)).toBe("Khoor, Zruog!");
   expect(caesarCipher("Hello!", 29)).toBe("Khoor!");
 });
+
+test("lengh of an array", () => {
+  const test = analyzeArray([1, 8, 3, 4, 2, 6]);
+  expect(test.length).toBe(6);
+});
+
+test("average of an array", () => {
+  const test = analyzeArray([1, 8, 3, 4, 2, 6]);
+  expect(test.average).toBe(4);
+});
+test("min of an array", () => {
+  const test = analyzeArray([1, 8, 3, 4, 2, 6]);
+  expect(test.min).toBe(1);
+});
+
+test("max of an array", () => {
+    const test = analyzeArray([1, 8, 3, 4, 2, 6]);
+    expect(test.max).toBe(8);
+  });
