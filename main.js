@@ -8,4 +8,10 @@ function reverseString(string) {
     }
     return result;
 }
-export { capitalize, reverseString };
+class Calculator {
+ add(num1, num2) {
+    return num1 + num2;
+ }
+}
+
+export { capitalize, reverseString, Calculator };
